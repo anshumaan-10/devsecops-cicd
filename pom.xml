@@ -47,6 +47,26 @@
 			</plugin>
 			
 		</plugins>
+
+		<plugin>
+		      <groupId>org.jacoco</groupId>
+		      <artifactId>jacoco-maven-plugin</artifactId>
+		      <version>0.8.13-SNAPSHOT</version>
+		      <executions>
+		        <execution>
+		          <goals>
+		            <goal>prepare-agent</goal> <!-- Initializes JaCoCo -->
+		          </goals>
+		        </execution>
+		        <execution>
+		          <id>report</id>
+		          <phase>test</phase>
+		          <goals>
+		            <goal>report</goal> <!-- Generates the coverage report -->
+		          </goals>
+		        </execution>
+		      </executions>
+                 </plugin>
 	</build>
 
 </project>
